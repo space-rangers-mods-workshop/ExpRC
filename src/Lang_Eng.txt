@@ -79,6 +79,7 @@ FormRuins ^{
         }
         PlayerSend=Operations with the node account and micromodules
         Questions ^{
+            MenuLine=Would you like to know anything else?
             Answer1=According to the ranger code, the main responsibility of every ranger is to search and terminate dominators. Unlike the military fleet, however, rangers are free to choose how to go about it. Rangers are completely autonomous -- physically, as well as economically. A ranger must be capable of making independent decisions and showing initiative, whether by supporting a military operation, undertaking a government mission or accruing personal wealth.
             Answer1=Remember, <Player>, you are your own boss and you answer to no one. For this reason, no matter the situation you find yourself in, let your conscience and sense of duty guide you. Do your best to uphold the reputation of our movement by helping civilian ships, helping to ease relations between the Coalition races, and doing charity when you can.
             Answer1=You have your entire life ahead of you. Live it with dignity. Then the dominators will never defeat us.
@@ -272,37 +273,36 @@ MicroModuls ^{
 Script ^{
     Mod_ExpRC ^{
         9=<0> has been moved from your ship into storage. You can collect it at any Ranger Center at any time that suits you.
-        15=What would you like to know?
+        14=What would you like to know?
         10=<0> has already been delivered to your ship.
-        16=<0>
+        15=<0>
         11=Every ranger has a micromodule storage of their own. It lets you get the module you need at any of our centers, and the modules you don't need we hand out at our own discretion -- but only until the moment you need them again.<br>Would you like to take micromodules from storage, or put some in?
-        29=Thanks, maybe some other time
+        28=Thanks, maybe some other time
         12=Choose a micromodule from your ship.
-        27=Thank you very much
+        26=Thank you very much
         13=Choose a micromodule from storage.
         4=Dear <Player>! All Ranger Centers have been destroyed.<br>Your personal micromodule storage has been lost.
-        28=Back
+        27=Back
         0=<color=255,240,100>Personal micromodule storage</color>
         1=<color=255,240,100>Cost</color>
         3=<color=0,255,0>Assets outside ship (Page </color><color=255,0,255>
         2=<color=0,255,0>Assets outside ship</color>
-        22=Put a micromodule into storage
-        23=Take a micromodule out of storage
-        19=All micromodules from your hold have been successfully moved into storage.<br>Would you like to do anything else?
-        18=All micromodules from storage have been successfully moved to your ship.<br>Would you like to do anything else?
-        25=<br>
-        26=<br>Micromodule <clr>
-        24=<br>However, that is not all. Thanks to your outstanding contribution to our knowledge of micromodules, our research department has been able to make a number of serious discoveries.<br>On behalf of all our scientists and specialists, allow us to present you with an experimental micromodule created with your active support:
+        21=Put a micromodule into storage
+        22=Take a micromodule out of storage
+        18=All micromodules from your hold have been successfully moved into storage.<br>Would you like to do anything else?
+        17=All micromodules from storage have been successfully moved to your ship.<br>Would you like to do anything else?
+        24=<br>
+        25=<br>Micromodule <clr>
+        23=<br>However, that is not all. Thanks to your outstanding contribution to our knowledge of micromodules, our research department has been able to make a number of serious discoveries.<br>On behalf of all our scientists and specialists, allow us to present you with an experimental micromodule created with your active support:
         6=Hand in <0> unknown micromodules for <1> nodes.
         7=Hand in <0> unknown micromodules for <1> nodes.
         8=Hand in <0> unknown micromodule for <1> nodes.
-        17=Wonderful, <Player>! We have credited <0> nodes to your account.<1>
-        14=Would you like to know anything else?
+        16=Wonderful, <Player>! We have credited <0> nodes to your account.<1>
         5=I would like to collect the modules from my storage at a Ranger Center
-        20=So you want to pull your hard-earned modules out of the pharaohs' clutches?<br><br>A praiseworthy wish. But, sorry, pal, you have to pay for that.<br><br>For one module we will take <0> cr off your account. That money will equip new raids on Ranger Centers -- and where did you think we get all those micromodules from?
-        30=Some other time
-        21=So, what exactly do you need?
-        31=Actually, I need something else
-        32=Thanks, I have learned everything I need
+        19=So you want to pull your hard-earned modules out of the pharaohs' clutches?<br><br>A praiseworthy wish. But, sorry, pal, you have to pay for that.<br><br>For one module we will take <0> cr off your account. That money will equip new raids on Ranger Centers -- and where did you think we get all those micromodules from?
+        29=Some other time
+        20=So, what exactly do you need?
+        30=Actually, I need something else
+        31=Thanks, I have learned everything I need
     }
 }
