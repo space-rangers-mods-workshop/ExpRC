@@ -1850,7 +1850,7 @@
           "Code.Type": "Turn",
           "Code": [
             "//str0 = \"<br>\" + '</color>' + \"<br>\" + \"Желаете узнать что-нибудь ещё?\";",
-            "str0 = '</color>' + \"Желаете узнать что-нибудь ещё?\";",
+            "str0 = '</color>' + CT('Script.Mod_ExpRC.14');",
             "",
             "int0 = 0;",
             "if(CurrentMods('Tweaks\\BlockPirates')) int0 = 0;",
@@ -1907,7 +1907,7 @@
           "Code.Type": "Turn",
           "Code": [
             "//str0 = \"<br>\" + '</color>' + \"<br>\" + \"Желаете узнать что-нибудь ещё?\";",
-            "str0 = '</color>' + \"Желаете узнать что-нибудь ещё?\";",
+            "str0 = '</color>' + CT('Script.Mod_ExpRC.14');",
             "",
             "int0 = 0;",
             "if(CurrentMods('Tweaks\\BlockPirates')) int0 = 0;",
@@ -1964,7 +1964,7 @@
           "Code.Type": "Turn",
           "Code": [
             "//str0 = \"<br>\" + '</color>' + \"<br>\" + \"Желаете узнать что-нибудь ещё?\";",
-            "str0 = '</color>' + \"Желаете узнать что-нибудь ещё?\";",
+            "str0 = '</color>' + CT('Script.Mod_ExpRC.14');",
             "",
             "int0 = 0;",
             "if(CurrentMods('Tweaks\\BlockPirates')) int0 = 0;",
@@ -2021,7 +2021,7 @@
           "Code.Type": "Turn",
           "Code": [
             "//str0 = \"<br>\" + '</color>' + \"<br>\" + \"Желаете узнать что-нибудь ещё?\";",
-            "str0 = '</color>' + \"Желаете узнать что-нибудь ещё?\";",
+            "str0 = '</color>' + CT('Script.Mod_ExpRC.14');",
             "",
             "int0 = 0;",
             "if(CurrentMods('Tweaks\\BlockPirates')) int0 = 0;",
@@ -2078,7 +2078,7 @@
           "Code.Type": "Turn",
           "Code": [
             "//str0 = \"<br>\" + '</color>' + \"<br>\" + \"Желаете узнать что-нибудь ещё?\";",
-            "str0 = '</color>' + \"Желаете узнать что-нибудь ещё?\";",
+            "str0 = '</color>' + CT('Script.Mod_ExpRC.14');",
             "",
             "int0 = 0;",
             "if(CurrentMods('Tweaks\\BlockPirates')) int0 = 0;",
@@ -2184,7 +2184,7 @@
           "Code.Type": "Turn",
           "Code": [
             "//str0 = \"<br>\" + '</color>' + \"<br>\" + \"Желаете узнать что-нибудь ещё?\";",
-            "str0 = '</color>' + \"Желаете узнать что-нибудь ещё?\";",
+            "str0 = '</color>' + CT('Script.Mod_ExpRC.14');",
             "",
             "int0 = 0;",
             "if(CurrentMods('Tweaks\\BlockPirates')) int0 = 0;",

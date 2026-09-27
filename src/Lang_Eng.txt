@@ -1,296 +1,308 @@
-FormInfo ^{
-    br=<br>
-    td_margin_center=<td=110>
-    td_margin_cost_0=<td=482>
-    td_margin_cost_00=<td=474>
-    td_margin_cost_000=<td=466>
-    td_margin_cost_0000=<td=458>
-    td_margin_cost_00000=<td=450>
-    td_margin_cost_000000=<td=442>
-    td_margin_cost_0000000=<td=434>
-    td_margin_cost_00000000=<td=426>
-    td_margin_cost_000000000=<td=418>
-    td_otstup_price=<td=422>
-}
-GalaxyNews ^{
-    RC ^{
-        DeadBaseNod=Dear <Player>! All Ranger Centers have been destroyed.
-        DeadBaseNod=Your node account of <Nod> nodes and your personal <clr>micromodule storage<clrEnd> are lost.
-        NewYear=Dear <Player>! <RCName> congratulates you on the new <Year> year and gives you this <Item> as a modest New Year's gift. You will be able to find it in your personal <clr>micromodule storage<clrEnd> at any Ranger Center.<br>All the best to you in the new year!
-    }
-}
-ShipInfo ^{
-    AddInfo ^{
-        CustomInfos ^{
-            RCSoldMMChainInfos ^{
-                Icon=1
-                Name=Info marker remembering every micromodule from chains sold to the player at a Ranger Center
-                OnActCode ^{
-                    01=if(!(CurTurn() % 57))
-                    01 ^{
-                        01=dword cur_info = CurInfo();
-                        02=ShipCustomShipInfoData(0, cur_info, 1, 0);
-                        03=ShipCustomShipInfoData(0, cur_info, 2, 0);
-                        04=ShipCustomShipInfoData(0, cur_info, 3, 0);
-                    }
-                }
-                OnActCodeTypes=t_OnStep
-                OnActStepTypes=0
-            }
-        }
-    }
-}
-FormRuins ^{
-    RC ^{
-        GiveNod ^{
-            AfterNo=As you wish, <Player>. If you happen to come into possession of micromodules you don't need, come see us.
-            AfterOk=Excellent, <Player>. We take micromodule <Name> from you and credit <Count> nodes to your account, and just as many -- to our node reserve.
-            Answer=Dear <Player>! We can take the micromodules you don't need in exchange for a certain amount of nodes. Let's see what you have here...
-            Answer=<MMList>
-            Nod=Micromodule <Name> for <Count> nodes.
-            Nothing=Unfortunately, we did not find any micromodules in your hold.
-            PlayerNo=Refuse to trade in micromodules
-            PlayerOk=Micromodule <Name> for <Count> nodes.
-            PlayerOkFirst=Trade in all <clr>level one<clrEnd> micromodules
-            PlayerOkSecond=Trade in all <clr>level two<clrEnd> micromodules
-            PlayerOkThird=Trade in all <clr>level three<clrEnd> micromodules
-            PlayerSend=BlockGiveNodPlayerSend
-            PlayerSendMod=Trade in micromodules for nodes
-            Sum=Status of your node account: <BaseNod> nodes.
-        }
-        GreetingAdd=By the way, let me remind you that all rangers enjoy free <clr>micromodule storage<clrEnd> at our centers. I strongly recommend making use of it if your hold has accumulated an unwanted mess.
-        GreetingAddMod=Status of your node account: #BaseNod# nodes.
-        MMStorage ^{
-            PlayerSend=Micromodule storage management
-            PutAll=Put all micromodules from the hold into storage
-            TakeAll=Take all modules from storage
-        }
-        PlayerSend=Operations with the node account and micromodules
-        Questions ^{
-            Answer1=According to the ranger code, the main responsibility of every ranger is to search and terminate dominators. Unlike the military fleet, however, rangers are free to choose how to go about it. Rangers are completely autonomous -- physically, as well as economically. A ranger must be capable of making independent decisions and showing initiative, whether by supporting a military operation, undertaking a government mission or accruing personal wealth.
-            Answer1=Remember, <Player>, you are your own boss and you answer to no one. For this reason, no matter the situation you find yourself in, let your conscience and sense of duty guide you. Do your best to uphold the reputation of our movement by helping civilian ships, helping to ease relations between the Coalition races, and doing charity when you can.
-            Answer1=You have your entire life ahead of you. Live it with dignity. Then the dominators will never defeat us.
-            Answer2=Is it your first time here or something? The galactic ranger rating is the classification system used to rate our pilots based on experience.
-            Answer2=Experience points can be earned in a variety of ways. Government missions and military operations against the dominators always yield considerable experience. But experience can also be gained in any skirmish with the Coalition ships, executing trades, handing in basic dominator elements, and so on. Basically, everything that you do will grow both your experience and rating.
-            Answer2=Most importantly, gaining experience enables rangers to hone their skills. For instance, by developing leadership a ranger will be able to command other ships, while developing mobility will improve his chances of evading enemy fire in combat.
-            Answer3=Nodes are microscopic elements which comprise the entire dominator control chain. A dark legacy of klissan technologies which has found new life in Coalition machines. These technologies are so complex, it will take millennia to study and decode them.
-            Answer3=Nevertheless, we've already found practical use for them. When arranged in certain combinations, the nodes turn into universal devices, suitable for utilization with Coalition technology. This fact actually makes perfect sense. After all, at their core the dominators are our machines, and the nodes have adapted to them.
-            Answer3=Our specialists went on to design various performance enhancing micromodules from them. These devices can be adapted to all types of equipment, boosting its parameters. The only drawback to the micromodules is that they are fundamentally incompatible with one another, meaning you cannot install two on the same piece of tech.
-            Answer3=In an effort to restock the raw materials needed to produce new micromodules, a chain of our centers has acquired license <clr>XC-112<clrEnd> to process the nodes. Rangers bring the nodes to us, and, in accordance with their node accounts, we supply them with assembled micromodules, ready to be integrated in their equipment.
-            Answer3=To be sure, rangers don't get everything they want. Enhancing micromodules are in great demand. As per terms of our license, rangers are issued no more than <clr>30<clrEnd>% of all assembled micromodules. The rest are distributed among various military and diplomatic vessels of the Coalition.
-            Answer4=We need an agent to infiltrate the pirate's ranks and win over their trust. If you don't yet know about their "special offer," then head on over to any pirate base and you'll understand. Then you just keep on climbing their career ladder and have the smarts to recognize when we come calling... But be very careful, as some of your predecessors are already floating in space as separate atoms after the pirates made them. Know that without accurate information about the pirates' plans and their leader's location, brute force will not help us. We can drive them out of star systems all we want, but they'll just keep coming. Information is the only thing that can put an end to this war, <Player>.
-            PlayerSend=I need information
-            Question1=What are the responsibilities of a ranger?
-            Question2=What is the ranger rating?
-            Question3=I need information on the nodes
-            Question4=How can I help the Coalition in the fight against piracy?
-        }
-        SaleNod ^{
-            NodsTaken=Good job, <Player>, we take the nodes and credit your personal node account. Account balance: #Account# nodes.
-            NodsTaken=Our node reserve storage has also increased and now amounts to #Reserve# nodes.
-            NodsTaken=Furthermore, your rating has also improved. Keep working to increase our stock of nodes going forward.
-            PlayerSend=Dialogue, dismissed!
-            PlayerSendMod=Hand in a batch of nodes: Count pcs.
-        }
-        TakeNod ^{
-            PlayerEnd=That's all the purchases for today!
-            PlayerSend=Get new micromodule
-            PlayerSendMod=I want to get a new micromodule
-            PlayerYetAnother=Well, I wouldn't say no to another micromodule!
-            RCAfterPlayerNo=A wise decision, <Player>. Keep bringing us nodes to increase your node account.
-            RCAfterPlayerOk=Excellent, <Player>. We're debiting <NodCnt> nodes from your account.
-            RCAfterPlayerOk=And here's your <Name> micromodule. An absolutely excellent choice. We're happy to help you in the fight against the dominators.
-            RCAfterPlayerOk=Keep in mind, <Player>, that we <clr>spent funds from the node reserve<clrEnd> to create a new micromodule, so don't forget to bring us more so we can keep up the supply.
-            RCAnswer=Dear <Player>! Today we are ready to offer you the following micromodules:
-            RCAnswer=-------------------------------------------
-            RCAnswerEnd=Status of your node account: <BaseNod> nodes.
-            RCAnswerEnd=Node stock in the network: #Reserve# nodes.
-            RCAnswerMM=. Micromodule <Name>
-            RCAnswerMMCost=Module cost: <Count> nodes.
-            RCAnswerStart=Dear <Player>! Today we are ready to offer you the following micromodules:<Text>
-        }
-        UnknownMM ^{
-            PlayerNo=Maybe some other time
-            PlayerSend=Hand in unknown micromodules
-            RCAnswer=Unknown micromodules -- that's what we call all the unstudied structures that fall into rangers' hands after the destruction of certain dominators
-            RCAnswer=At the moment we have no information about these structures, in particular as to why we cannot use them not only in our equipment, but in dominator equipment as well. Perhaps they are just laboratory prototypes, not even completed yet.
-            RCAnswer=Either way, these modules help our specialists develop new structures. Access to some of them is granted to rangers who have particularly distinguished themselves in handing them in.
-            RCAnswer=Besides, we reward the very act of handing in unknown micromodules, crediting <clr>reward<clrEnd> nodes to the ranger's personal node account for every specimen turned in to us.
-        }
-    }
-}
-Items ^{
-    CustomCountables ^{
-        Mod_ExpRC_UnknownMM ^{
-            Name=Unknown micromodule
-            Text=A micromodule with unknown properties. Using one to improve your own equipment would be unwise, but specialists at the <color=255,240,100>Ranger Centers</color> are sure to take an interest in it.
-            Text=Quantity: <N>
-        }
-    }
-}
-MicroModuls ^{
-    ExpRC_Absoluten ^{
-        Color=41,125,222
-        CustomTag=Mod_ExpRC1
-        Equipments=FuelTank,Engine,Radar,Scaner,Droid,Hook,DefGenerator
-        Fragility=80
-        KellerExchange=2
-        KellerValue=100
-        KindGraph=Exp
-        LockedAcryn=3
-        Name=Absoluten
-        NonSearchable=1
-        Owner=Maloc,Peleng,People,Fei,Gaal,PirateClan,Kling
-        Priority=0
-        Special=1
-        Text=The newest experimental development in the field of micromodule creation. It contains a powerful analytical block that optimizes the operation of <clr>any equipment<clrEnd>, considerably boosting its performance and overall reliability.
-        Text=<clr><clrEnd>
-        Text=Engine speed: <bonSpeed>
-        Text=Jumping range: <bonJump>
-        Text=Fuel tank capacity: <bonFuel>
-        Text=Radar range: <bonRadar>
-        Text=Scanner power: <bonScan><clr>%<clrEnd>
-        Text=Droid effectiveness: <bonDroid>
-        Text=Gripper power: <bonHook>
-        Text=Gripper range: <bonHookRadius>
-        Text=Gripper pull speed at long range: <bonHookMaxSpeed>
-        Text=Shield generator power: <bonDef><clr>%<clrEnd>
-        Text=Durability: <clr>+25%<clrEnd>
-        UniqueMM=1
-        bonDef=11
-        bonDroid=45
-        bonFuel=40
-        bonHook=75
-        bonHookMaxSpeed=3
-        bonHookMinSpeed=3
-        bonHookRadius=20
-        bonJump=9
-        bonRadar=1850
-        bonScan=18
-        bonSpeed=140
-    }
-    ExpRC_Invisiby ^{
-        Color=41,125,222
-        CustomTag=Mod_ExpRC2
-        Equipments=Hull
-        FragilityEnergy=60
-        FragilityMissile=60
-        FragilitySplinter=60
-        KellerExchange=2
-        KellerValue=75
-        KindGraph=Exp
-        LockedAcryn=3
-        Name=Invisiby
-        NonSearchable=1
-        Owner=Maloc,Peleng,People,Fei,Gaal,PirateClan,Kling
-        Priority=0
-        Special=1
-        Text=The newest experimental development in the field of micromodule creation. It changes the material of the <clr>hull<clrEnd> plating on an atomic level, greatly enhancing its reflective properties. This upgrade makes the ship far less visible to radar, which seriously hampers any enemy targeting systems.
-        Text=<clr><clrEnd>
-        Text=Damage susceptibility: <clr>-40%<clrEnd>
-        UniqueMM=1
-    }
-    ExpRC_Maximus ^{
-        Color=41,125,222
-        CustomTag=Mod_ExpRC4
-        Equipments=WEnergy,WSplinter,WMissile
-        KellerExchange=2
-        KellerValue=100
-        KindGraph=Exp
-        LockedAcryn=3
-        Name=Maximus
-        NonSearchable=1
-        Owner=Maloc,Peleng,People,Fei,Gaal,PirateClan,Kling
-        Priority=0
-        Special=1
-        Text=The newest experimental development in the field of micromodule creation. Even <clr>Maximus<clrEnd>'s own inventor has so far failed to grasp the exact principle behind its operation. <clr>Any weapon<clrEnd> equipped with this micromodule will always deal exclusively <clr>the maximum possible damage<clrEnd>.
-        Text=Additional effect: <clr>no damage spread<clrEnd>
-        UniqueMM=1
-        WeaponMods=NoDelta
-    }
-    ExpRC_Mumakil ^{
-        Color=41,125,222
-        CustomTag=Mod_ExpRC3
-        Equipments=Hull
-        KellerExchange=2
-        KellerValue=75
-        KindGraph=Exp
-        LockedAcryn=3
-        Name=Mumakil
-        NonSearchable=1
-        Owner=Maloc,Peleng,People,Fei,Gaal,PirateClan,Kling
-        Priority=0
-        Size=125
-        Special=1
-        Text=The newest experimental development in the field of micromodule creation. It compresses the material of the <clr>hull<clrEnd> plating, making it very dense, strong and heavy. By reducing the thickness of the plating, the ship's interior space expands, but the weight of the modified hull also grows<br>considerably.
-        Text=<clr><clrEnd>
-        Text=Hull armor: <bonHull>
-        Text=Hull size: <clr>+25%<clrEnd>
-        Text=Ship mass: <bonMass><clr>%<clrEnd>
-        UniqueMM=1
-        bonHull=6
-        bonMass=20
-    }
-    ExpRC_Ultimatus ^{
-        Color=41,125,222
-        CustomTag=Mod_ExpRC0
-        Equipments=WEnergy,WSplinter,WMissile
-        KellerExchange=2
-        KellerValue=75
-        KindGraph=Exp
-        LockedAcryn=3
-        Name=Ultimatus
-        NonSearchable=1
-        Owner=Maloc,Peleng,People,Fei,Gaal,PirateClan,Kling
-        Priority=0
-        Special=1
-        Text=The newest experimental development in the field of micromodule creation. It modifies the targeting systems of <clr>any weapon<clrEnd>, greatly increasing the damage they deal and boosting their maximum range.
-        Text=<clr><clrEnd>
-        Text=Energy weapons damage: <bonWEnergy>
-        Text=Fragmentation weapons damage: <bonWSplinter>
-        Text=Missile weapons damage: <bonWMissile>
-        Text=Firing range: <bonWRadius> million km
-        UniqueMM=1
-        bonWEnergy=40
-        bonWMissile=60
-        bonWRadius=50
-        bonWSplinter=50
-    }
-}
-Script ^{
-    Mod_ExpRC ^{
-        9=<0> has been moved from your ship into storage. You can collect it at any Ranger Center at any time that suits you.
-        15=What would you like to know?
-        10=<0> has already been delivered to your ship.
-        16=<0>
-        11=Every ranger has a micromodule storage of their own. It lets you get the module you need at any of our centers, and the modules you don't need we hand out at our own discretion -- but only until the moment you need them again.<br>Would you like to take micromodules from storage, or put some in?
-        29=Thanks, maybe some other time
-        12=Choose a micromodule from your ship.
-        27=Thank you very much
-        13=Choose a micromodule from storage.
-        4=Dear <Player>! All Ranger Centers have been destroyed.<br>Your personal micromodule storage has been lost.
-        28=Back
-        0=<color=255,240,100>Personal micromodule storage</color>
-        1=<color=255,240,100>Cost</color>
-        3=<color=0,255,0>Assets outside ship (Page </color><color=255,0,255>
-        2=<color=0,255,0>Assets outside ship</color>
-        22=Put a micromodule into storage
-        23=Take a micromodule out of storage
-        19=All micromodules from your hold have been successfully moved into storage.<br>Would you like to do anything else?
-        18=All micromodules from storage have been successfully moved to your ship.<br>Would you like to do anything else?
-        25=<br>
-        26=<br>Micromodule <clr>
-        24=<br>However, that is not all. Thanks to your outstanding contribution to our knowledge of micromodules, our research department has been able to make a number of serious discoveries.<br>On behalf of all our scientists and specialists, allow us to present you with an experimental micromodule created with your active support:
-        6=Hand in <0> unknown micromodules for <1> nodes.
-        7=Hand in <0> unknown micromodules for <1> nodes.
-        8=Hand in <0> unknown micromodule for <1> nodes.
-        17=Wonderful, <Player>! We have credited <0> nodes to your account.<1>
-        14=Would you like to know anything else?
-        5=I would like to collect the modules from my storage at a Ranger Center
-        20=So you want to pull your hard-earned modules out of the pharaohs' clutches?<br><br>A praiseworthy wish. But, sorry, pal, you have to pay for that.<br><br>For one module we will take <0> cr off your account. That money will equip new raids on Ranger Centers -- and where did you think we get all those micromodules from?
-        30=Some other time
-        21=So, what exactly do you need?
-        31=Actually, I need something else
-        32=Thanks, I have learned everything I need
-    }
+FormInfo ^{
+    br=<br>
+    td_margin_center=<td=110>
+    td_margin_cost_0=<td=482>
+    td_margin_cost_00=<td=474>
+    td_margin_cost_000=<td=466>
+    td_margin_cost_0000=<td=458>
+    td_margin_cost_00000=<td=450>
+    td_margin_cost_000000=<td=442>
+    td_margin_cost_0000000=<td=434>
+    td_margin_cost_00000000=<td=426>
+    td_margin_cost_000000000=<td=418>
+    td_otstup_price=<td=422>
+}
+GalaxyNews ^{
+    RC ^{
+        DeadBaseNod=Dear <Player>! All Ranger Centers have been destroyed.
+        DeadBaseNod=Your node account of <Nod> nodes and your personal <clr>micromodule storage<clrEnd> are lost.
+        NewYear=Dear <Player>! <RCName> congratulates you on the new <Year> year and gives you this <Item> as a modest New Year's gift. You will be able to find it in your personal <clr>micromodule storage<clrEnd> at any Ranger Center.<br>All the best to you in the new year!
+    }
+}
+ShipInfo ^{
+    AddInfo ^{
+        CustomInfos ^{
+            RCSoldMMChainInfos ^{
+                Icon=1
+                Name=Info marker remembering every micromodule from chains sold to the player at a Ranger Center
+                OnActCode ^{
+                    01=if(!(CurTurn() % 57))
+                    01 ^{
+                        01=dword cur_info = CurInfo();
+                        02=ShipCustomShipInfoData(0, cur_info, 1, 0);
+                        03=ShipCustomShipInfoData(0, cur_info, 2, 0);
+                        04=ShipCustomShipInfoData(0, cur_info, 3, 0);
+                    }
+                }
+                OnActCodeTypes=t_OnStep
+                OnActStepTypes=0
+            }
+        }
+    }
+}
+FormRuins ^{
+    RC ^{
+        AboutNod ^{
+            PlayerSend=BlockAboutNodPlayerSend
+        }
+        BestRanger ^{
+            PlayerSend=BlockBestRangerPlayerSend
+        }
+        Rating ^{
+            PlayerSend=BlockRatingPlayerSend
+        }
+        PirateClan ^{
+            PlayerSend=BlockPirateClanPlayerSend
+        }
+        GiveNod ^{
+            AfterNo=As you wish, <Player>. If you happen to come into possession of micromodules you don't need, come see us.
+            AfterOk=Excellent, <Player>. We take micromodule <Name> from you and credit <Count> nodes to your account, and just as many -- to our node reserve.
+            Answer=Dear <Player>! We can take the micromodules you don't need in exchange for a certain amount of nodes. Let's see what you have here...
+            Answer=<MMList>
+            Nod=Micromodule <Name> for <Count> nodes.
+            Nothing=Unfortunately, we did not find any micromodules in your hold.
+            PlayerNo=Refuse to trade in micromodules
+            PlayerOk=Micromodule <Name> for <Count> nodes.
+            PlayerOkFirst=Trade in all <clr>level one<clrEnd> micromodules
+            PlayerOkSecond=Trade in all <clr>level two<clrEnd> micromodules
+            PlayerOkThird=Trade in all <clr>level three<clrEnd> micromodules
+            PlayerSend=BlockGiveNodPlayerSend
+            PlayerSendMod=Trade in micromodules for nodes
+            Sum=Status of your node account: <BaseNod> nodes.
+        }
+        GreetingAdd=By the way, let me remind you that all rangers enjoy free <clr>micromodule storage<clrEnd> at our centers. I strongly recommend making use of it if your hold has accumulated an unwanted mess.
+        GreetingAddMod=Status of your node account: #BaseNod# nodes.
+        MMStorage ^{
+            PlayerSend=Micromodule storage management
+            PutAll=Put all micromodules from the hold into storage
+            TakeAll=Take all modules from storage
+        }
+        PlayerSend=Operations with the node account and micromodules
+        Questions ^{
+            Answer1=According to the ranger code, the main responsibility of every ranger is to search and terminate dominators. Unlike the military fleet, however, rangers are free to choose how to go about it. Rangers are completely autonomous -- physically, as well as economically. A ranger must be capable of making independent decisions and showing initiative, whether by supporting a military operation, undertaking a government mission or accruing personal wealth.
+            Answer1=Remember, <Player>, you are your own boss and you answer to no one. For this reason, no matter the situation you find yourself in, let your conscience and sense of duty guide you. Do your best to uphold the reputation of our movement by helping civilian ships, helping to ease relations between the Coalition races, and doing charity when you can.
+            Answer1=You have your entire life ahead of you. Live it with dignity. Then the dominators will never defeat us.
+            Answer2=Is it your first time here or something? The galactic ranger rating is the classification system used to rate our pilots based on experience.
+            Answer2=Experience points can be earned in a variety of ways. Government missions and military operations against the dominators always yield considerable experience. But experience can also be gained in any skirmish with the Coalition ships, executing trades, handing in basic dominator elements, and so on. Basically, everything that you do will grow both your experience and rating.
+            Answer2=Most importantly, gaining experience enables rangers to hone their skills. For instance, by developing leadership a ranger will be able to command other ships, while developing mobility will improve his chances of evading enemy fire in combat.
+            Answer3=Nodes are microscopic elements which comprise the entire dominator control chain. A dark legacy of klissan technologies which has found new life in Coalition machines. These technologies are so complex, it will take millennia to study and decode them.
+            Answer3=Nevertheless, we've already found practical use for them. When arranged in certain combinations, the nodes turn into universal devices, suitable for utilization with Coalition technology. This fact actually makes perfect sense. After all, at their core the dominators are our machines, and the nodes have adapted to them.
+            Answer3=Our specialists went on to design various performance enhancing micromodules from them. These devices can be adapted to all types of equipment, boosting its parameters. The only drawback to the micromodules is that they are fundamentally incompatible with one another, meaning you cannot install two on the same piece of tech.
+            Answer3=In an effort to restock the raw materials needed to produce new micromodules, a chain of our centers has acquired license <clr>XC-112<clrEnd> to process the nodes. Rangers bring the nodes to us, and, in accordance with their node accounts, we supply them with assembled micromodules, ready to be integrated in their equipment.
+            Answer3=To be sure, rangers don't get everything they want. Enhancing micromodules are in great demand. As per terms of our license, rangers are issued no more than <clr>30<clrEnd>% of all assembled micromodules. The rest are distributed among various military and diplomatic vessels of the Coalition.
+            Answer4=We need an agent to infiltrate the pirate's ranks and win over their trust. If you don't yet know about their "special offer," then head on over to any pirate base and you'll understand. Then you just keep on climbing their career ladder and have the smarts to recognize when we come calling... But be very careful, as some of your predecessors are already floating in space as separate atoms after the pirates made them. Know that without accurate information about the pirates' plans and their leader's location, brute force will not help us. We can drive them out of star systems all we want, but they'll just keep coming. Information is the only thing that can put an end to this war, <Player>.
+            PlayerSend=I need information
+            Question1=What are the responsibilities of a ranger?
+            Question2=What is the ranger rating?
+            Question3=I need information on the nodes
+            Question4=How can I help the Coalition in the fight against piracy?
+        }
+        SaleNod ^{
+            NodsTaken=Good job, <Player>, we take the nodes and credit your personal node account. Account balance: #Account# nodes.
+            NodsTaken=Our node reserve storage has also increased and now amounts to #Reserve# nodes.
+            NodsTaken=Furthermore, your rating has also improved. Keep working to increase our stock of nodes going forward.
+            PlayerSend=Dialogue, dismissed!
+            PlayerSendMod=Hand in a batch of nodes: Count pcs.
+        }
+        TakeNod ^{
+            PlayerEnd=That's all the purchases for today!
+            PlayerSend=Get new micromodule
+            PlayerSendMod=I want to get a new micromodule
+            PlayerYetAnother=Well, I wouldn't say no to another micromodule!
+            RCAfterPlayerNo=A wise decision, <Player>. Keep bringing us nodes to increase your node account.
+            RCAfterPlayerOk=Excellent, <Player>. We're debiting <NodCnt> nodes from your account.
+            RCAfterPlayerOk=And here's your <Name> micromodule. An absolutely excellent choice. We're happy to help you in the fight against the dominators.
+            RCAfterPlayerOk=Keep in mind, <Player>, that we <clr>spent funds from the node reserve<clrEnd> to create a new micromodule, so don't forget to bring us more so we can keep up the supply.
+            RCAnswer=Dear <Player>! Today we are ready to offer you the following micromodules:
+            RCAnswer=-------------------------------------------
+            RCAnswerEnd=Status of your node account: <BaseNod> nodes.
+            RCAnswerEnd=Node stock in the network: #Reserve# nodes.
+            RCAnswerMM=. Micromodule <Name>
+            RCAnswerMMCost=Module cost: <Count> nodes.
+            RCAnswerStart=Dear <Player>! Today we are ready to offer you the following micromodules:<Text>
+        }
+        UnknownMM ^{
+            PlayerNo=Maybe some other time
+            PlayerSend=Hand in unknown micromodules
+            RCAnswer=Unknown micromodules -- that's what we call all the unstudied structures that fall into rangers' hands after the destruction of certain dominators
+            RCAnswer=At the moment we have no information about these structures, in particular as to why we cannot use them not only in our equipment, but in dominator equipment as well. Perhaps they are just laboratory prototypes, not even completed yet.
+            RCAnswer=Either way, these modules help our specialists develop new structures. Access to some of them is granted to rangers who have particularly distinguished themselves in handing them in.
+            RCAnswer=Besides, we reward the very act of handing in unknown micromodules, crediting <clr>reward<clrEnd> nodes to the ranger's personal node account for every specimen turned in to us.
+        }
+    }
+}
+Items ^{
+    CustomCountables ^{
+        Mod_ExpRC_UnknownMM ^{
+            Name=Unknown micromodule
+            Text=A micromodule with unknown properties. Using one to improve your own equipment would be unwise, but specialists at the <color=255,240,100>Ranger Centers</color> are sure to take an interest in it.
+            Text=Quantity: <N>
+        }
+    }
+}
+MicroModuls ^{
+    ExpRC_Absoluten ^{
+        Color=41,125,222
+        CustomTag=Mod_ExpRC1
+        Equipments=FuelTank,Engine,Radar,Scaner,Droid,Hook,DefGenerator
+        Fragility=80
+        KellerExchange=2
+        KellerValue=100
+        KindGraph=Exp
+        LockedAcryn=3
+        Name=Absoluten
+        NonSearchable=1
+        Owner=Maloc,Peleng,People,Fei,Gaal,PirateClan,Kling
+        Priority=0
+        Special=1
+        Text=The newest experimental development in the field of micromodule creation. It contains a powerful analytical block that optimizes the operation of <clr>any equipment<clrEnd>, considerably boosting its performance and overall reliability.
+        Text=<clr><clrEnd>
+        Text=Engine speed: <bonSpeed>
+        Text=Jumping range: <bonJump>
+        Text=Fuel tank capacity: <bonFuel>
+        Text=Radar range: <bonRadar>
+        Text=Scanner power: <bonScan><clr>%<clrEnd>
+        Text=Droid effectiveness: <bonDroid>
+        Text=Gripper power: <bonHook>
+        Text=Gripper range: <bonHookRadius>
+        Text=Gripper pull speed at long range: <bonHookMaxSpeed>
+        Text=Shield generator power: <bonDef><clr>%<clrEnd>
+        Text=Durability: <clr>+25%<clrEnd>
+        UniqueMM=1
+        bonDef=11
+        bonDroid=45
+        bonFuel=40
+        bonHook=75
+        bonHookMaxSpeed=3
+        bonHookMinSpeed=3
+        bonHookRadius=20
+        bonJump=9
+        bonRadar=1850
+        bonScan=18
+        bonSpeed=140
+    }
+    ExpRC_Invisiby ^{
+        Color=41,125,222
+        CustomTag=Mod_ExpRC2
+        Equipments=Hull
+        FragilityEnergy=60
+        FragilityMissile=60
+        FragilitySplinter=60
+        KellerExchange=2
+        KellerValue=75
+        KindGraph=Exp
+        LockedAcryn=3
+        Name=Invisiby
+        NonSearchable=1
+        Owner=Maloc,Peleng,People,Fei,Gaal,PirateClan,Kling
+        Priority=0
+        Special=1
+        Text=The newest experimental development in the field of micromodule creation. It changes the material of the <clr>hull<clrEnd> plating on an atomic level, greatly enhancing its reflective properties. This upgrade makes the ship far less visible to radar, which seriously hampers any enemy targeting systems.
+        Text=<clr><clrEnd>
+        Text=Damage susceptibility: <clr>-40%<clrEnd>
+        UniqueMM=1
+    }
+    ExpRC_Maximus ^{
+        Color=41,125,222
+        CustomTag=Mod_ExpRC4
+        Equipments=WEnergy,WSplinter,WMissile
+        KellerExchange=2
+        KellerValue=100
+        KindGraph=Exp
+        LockedAcryn=3
+        Name=Maximus
+        NonSearchable=1
+        Owner=Maloc,Peleng,People,Fei,Gaal,PirateClan,Kling
+        Priority=0
+        Special=1
+        Text=The newest experimental development in the field of micromodule creation. Even <clr>Maximus<clrEnd>'s own inventor has so far failed to grasp the exact principle behind its operation. <clr>Any weapon<clrEnd> equipped with this micromodule will always deal exclusively <clr>the maximum possible damage<clrEnd>.
+        Text=Additional effect: <clr>no damage spread<clrEnd>
+        UniqueMM=1
+        WeaponMods=NoDelta
+    }
+    ExpRC_Mumakil ^{
+        Color=41,125,222
+        CustomTag=Mod_ExpRC3
+        Equipments=Hull
+        KellerExchange=2
+        KellerValue=75
+        KindGraph=Exp
+        LockedAcryn=3
+        Name=Mumakil
+        NonSearchable=1
+        Owner=Maloc,Peleng,People,Fei,Gaal,PirateClan,Kling
+        Priority=0
+        Size=125
+        Special=1
+        Text=The newest experimental development in the field of micromodule creation. It compresses the material of the <clr>hull<clrEnd> plating, making it very dense, strong and heavy. By reducing the thickness of the plating, the ship's interior space expands, but the weight of the modified hull also grows<br>considerably.
+        Text=<clr><clrEnd>
+        Text=Hull armor: <bonHull>
+        Text=Hull size: <clr>+25%<clrEnd>
+        Text=Ship mass: <bonMass><clr>%<clrEnd>
+        UniqueMM=1
+        bonHull=6
+        bonMass=20
+    }
+    ExpRC_Ultimatus ^{
+        Color=41,125,222
+        CustomTag=Mod_ExpRC0
+        Equipments=WEnergy,WSplinter,WMissile
+        KellerExchange=2
+        KellerValue=75
+        KindGraph=Exp
+        LockedAcryn=3
+        Name=Ultimatus
+        NonSearchable=1
+        Owner=Maloc,Peleng,People,Fei,Gaal,PirateClan,Kling
+        Priority=0
+        Special=1
+        Text=The newest experimental development in the field of micromodule creation. It modifies the targeting systems of <clr>any weapon<clrEnd>, greatly increasing the damage they deal and boosting their maximum range.
+        Text=<clr><clrEnd>
+        Text=Energy weapons damage: <bonWEnergy>
+        Text=Fragmentation weapons damage: <bonWSplinter>
+        Text=Missile weapons damage: <bonWMissile>
+        Text=Firing range: <bonWRadius> million km
+        UniqueMM=1
+        bonWEnergy=40
+        bonWMissile=60
+        bonWRadius=50
+        bonWSplinter=50
+    }
+}
+Script ^{
+    Mod_ExpRC ^{
+        9=<0> has been moved from your ship into storage. You can collect it at any Ranger Center at any time that suits you.
+        15=What would you like to know?
+        10=<0> has already been delivered to your ship.
+        16=<0>
+        11=Every ranger has a micromodule storage of their own. It lets you get the module you need at any of our centers, and the modules you don't need we hand out at our own discretion -- but only until the moment you need them again.<br>Would you like to take micromodules from storage, or put some in?
+        29=Thanks, maybe some other time
+        12=Choose a micromodule from your ship.
+        27=Thank you very much
+        13=Choose a micromodule from storage.
+        4=Dear <Player>! All Ranger Centers have been destroyed.<br>Your personal micromodule storage has been lost.
+        28=Back
+        0=<color=255,240,100>Personal micromodule storage</color>
+        1=<color=255,240,100>Cost</color>
+        3=<color=0,255,0>Assets outside ship (Page </color><color=255,0,255>
+        2=<color=0,255,0>Assets outside ship</color>
+        22=Put a micromodule into storage
+        23=Take a micromodule out of storage
+        19=All micromodules from your hold have been successfully moved into storage.<br>Would you like to do anything else?
+        18=All micromodules from storage have been successfully moved to your ship.<br>Would you like to do anything else?
+        25=<br>
+        26=<br>Micromodule <clr>
+        24=<br>However, that is not all. Thanks to your outstanding contribution to our knowledge of micromodules, our research department has been able to make a number of serious discoveries.<br>On behalf of all our scientists and specialists, allow us to present you with an experimental micromodule created with your active support:
+        6=Hand in <0> unknown micromodules for <1> nodes.
+        7=Hand in <0> unknown micromodules for <1> nodes.
+        8=Hand in <0> unknown micromodule for <1> nodes.
+        17=Wonderful, <Player>! We have credited <0> nodes to your account.<1>
+        14=Would you like to know anything else?
+        5=I would like to collect the modules from my storage at a Ranger Center
+        20=So you want to pull your hard-earned modules out of the pharaohs' clutches?<br><br>A praiseworthy wish. But, sorry, pal, you have to pay for that.<br><br>For one module we will take <0> cr off your account. That money will equip new raids on Ranger Centers -- and where did you think we get all those micromodules from?
+        30=Some other time
+        21=So, what exactly do you need?
+        31=Actually, I need something else
+        32=Thanks, I have learned everything I need
+    }
 }

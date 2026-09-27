@@ -42,6 +42,18 @@ ShipInfo ^{
 }
 FormRuins ^{
     RC ^{
+        AboutNod ^{
+            PlayerSend=BlockAboutNodPlayerSend
+        }
+        BestRanger ^{
+            PlayerSend=BlockBestRangerPlayerSend
+        }
+        Rating ^{
+            PlayerSend=BlockRatingPlayerSend
+        }
+        PirateClan ^{
+            PlayerSend=BlockPirateClanPlayerSend
+        }
         GiveNod ^{
             AfterNo=Как хотите, <Player>. Если у вас появятся ненужные вам микромодули, сразу приходите к нам.
             AfterOk=Отлично, <Player>. Мы забираем у вас микромодуль <Name> и начисляем на ваш счет <Count> нд., и столько же - в наш резерв нодов.
