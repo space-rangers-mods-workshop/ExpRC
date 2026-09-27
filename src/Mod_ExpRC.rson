@@ -1087,7 +1087,7 @@
             "        AddDialogBlock('NodeStateInfoPosCorrection', 2);",
             "        AddDialogInject('Info','', CT('FormRuins.RC.Questions.PlayerSend'),1);",
             "        if(IsScriptActive('ShuKlissan')) AddDialogBlock(CT('Script.Mod_ShuKlissan.KlissanInfoRC.PlayerAsk'), 2);",
-            "        AddDialogInject('X', Format(CT('FormRuins.RC.GreetingAddMod'), '#BaseNod#', RangerBaseNodes(Player())), 'NodeStateInfoPosCorrection', 0);",
+            "        AddDialogInject('X', Format(CT('FormRuins.RC.GreetingAddMod'), '<BaseNod'+'>', RangerBaseNodes(Player())), 'NodeStateInfoPosCorrection', 0);",
             "",
             "        //Добавляем подмену оригинальных диалогов для приобретения и сдачи ММ",
             "        if(ExpRCRebootMMChainInit) {",
@@ -1300,7 +1300,7 @@
             "}",
             "",
             "//Собираем строчки для подстановки",
-            "str0 = '</color>' + Format(CT('FormRuins.RC.TakeNod.RCAnswerStart'), '<Text'+'>', str0, '') + Format('<br>') + DefSplt + Format('<br>') + Format(CT('FormRuins.RC.TakeNod.RCAnswerEnd'),'#Reserve#',FreeNodes, '<BaseNod'+'>', RangerBaseNodes(Player()));",
+            "str0 = '</color>' + Format(CT('FormRuins.RC.TakeNod.RCAnswerStart'), '<Text'+'>', str0, '') + Format('<br>') + DefSplt + Format('<br>') + Format(CT('FormRuins.RC.TakeNod.RCAnswerEnd'),'<Reserve'+'>',FreeNodes, '<BaseNod'+'>', RangerBaseNodes(Player()));",
             "str4 = '</color>' + CT('FormRuins.RC.TakeNod.PlayerNo');",
             "DChange(17);",
             "exit;"
@@ -1472,7 +1472,7 @@
             "Sound('Sound.Buy');",
             "FreeNodes = FreeNodes + dwd0;",
             "",
-            "tstr1 = '</color>' +  Format(CT('FormRuins.RC.SaleNod.NodsTaken'),'#Reserve#',FreeNodes,'#Account#',RangerBaseNodes(Player()));",
+            "tstr1 = '</color>' +  Format(CT('FormRuins.RC.SaleNod.NodsTaken'),'<Reserve'+'>',FreeNodes,'<Account'+'>',RangerBaseNodes(Player()));",
             "DChange(22);",
             "exit;"
           ]
@@ -1618,7 +1618,7 @@
             "}",
             "",
             "//Собираем строчки для подстановки",
-            "str0 = '</color>' + Format(CT('FormRuins.RC.TakeNod.RCAnswerStart'), '<Text'+'>', str0, '') + Format('<br>') + DefSplt + Format('<br>') + Format(CT('FormRuins.RC.TakeNod.RCAnswerEnd'),'#Reserve#',FreeNodes, '<BaseNod'+'>', RangerBaseNodes(Player()));",
+            "str0 = '</color>' + Format(CT('FormRuins.RC.TakeNod.RCAnswerStart'), '<Text'+'>', str0, '') + Format('<br>') + DefSplt + Format('<br>') + Format(CT('FormRuins.RC.TakeNod.RCAnswerEnd'),'<Reserve'+'>',FreeNodes, '<BaseNod'+'>', RangerBaseNodes(Player()));",
             "str4 = '</color>' + CT('FormRuins.RC.TakeNod.PlayerNo');",
             "DChange(24);",
             "exit;"
@@ -2502,7 +2502,7 @@
             "}",
             "",
             "if(int0 == 1) InjectAnswer('UniMM', CT('FormRuins.RC.UnknownMM.PlayerSend'), 0);",
-            "//InjectAnswer('X', Format(CT('FormRuins.RC.GreetingAddMod'), '#BaseNod#', RangerBaseNodes(Player())), 'NodeStateInfoPosCorrection', 0);",
+            "//InjectAnswer('X', Format(CT('FormRuins.RC.GreetingAddMod'), '<BaseNod'+'>', RangerBaseNodes(Player())), 'NodeStateInfoPosCorrection', 0);",
             "",
             "//Добавляем подмену оригинальных диалогов для приобретения и сдачи ММ",
             "if(ExpRCRebootMMChainInit) {",
