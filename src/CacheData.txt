@@ -1,0 +1,25 @@
+Bm ~{
+    Container ~{
+        2Mod_ExpRC_UnknownMM=Mods\Miscellaneous\ExpRC\Data\Items\Mod_ExpRC_RCmm.gai
+        2mm_Exp=Mods\Miscellaneous\ExpRC\Data\Micromoduls\2mm_Exp.gai
+    }
+    Items ~{
+        2Mod_ExpRC_UnknownMM0_s=Mods\Miscellaneous\ExpRC\Data\Items\Mod_ExpRC_RCmm.gi
+        2Mod_ExpRC_UnknownMM1_s=Mods\Miscellaneous\ExpRC\Data\Items\Mod_ExpRC_RCmm.gi
+        2Mod_ExpRC_UnknownMM2_s=Mods\Miscellaneous\ExpRC\Data\Items\Mod_ExpRC_RCmm.gi
+        2Mod_ExpRC_UnknownMM3_s=Mods\Miscellaneous\ExpRC\Data\Items\Mod_ExpRC_RCmm.gi
+        2Mod_ExpRC_UnknownMM4_s=Mods\Miscellaneous\ExpRC\Data\Items\Mod_ExpRC_RCmm.gi
+    }
+    Micromoduls ~{
+        2MMExp_Set=Mods\Miscellaneous\ExpRC\Data\Micromoduls\2MMExpSet.gi
+        2MMExp_s=Mods\Miscellaneous\ExpRC\Data\Micromoduls\2MMExp.gi
+    }
+    MsgPlayer ~{
+        2MMStorageA=Mods\Miscellaneous\ExpRC\DATA\Msg\2MMStorageA.gi
+        2MMStorageD=Mods\Miscellaneous\ExpRC\DATA\Msg\2MMStorageD.gi
+        2MMStorageN=Mods\Miscellaneous\ExpRC\DATA\Msg\2MMStorageN.gi
+    }
+}
+Script ~{
+    Mod_ExpRC=Mods\Miscellaneous\ExpRC\Data\Script\Mod_ExpRC.scr
+}

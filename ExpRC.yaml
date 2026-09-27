@@ -1,0 +1,60 @@
+mod: ExpRC
+
+# public — keys mirror ModuleInfo.txt; rendered into mod/ModuleInfo.txt by build_mod.py
+# and into the card README.md by generate_card.py.
+info:
+  Name: ExpRC
+  Author: "Huk, Klaxons, ringill"
+  Conflict: SR2Reboot
+  Dependence: UtilityFunctionsPack
+  Priority: 1
+  Section: Разное
+  SectionEng: Miscellaneous
+  Languages: Rus,Eng
+  SmallDescription: |-
+    Расширяет возможности центров рейнджеров
+    (Мод можно <color=0,150,15>подключать</color>/<color=150,0,15>отключать</color> в течение партии)
+  SmallDescriptionEng: |-
+    Expands the capabilities of Ranger Centers
+    (The mod can be <color=0,150,15>enabled</color>/<color=150,0,15>disabled</color> during a game)
+  FullDescription: |-
+    <color=0,50,200>Расширение функционала центров рейнджеров:</color>
+    - У игрока появляется персональное хранилище микромодулей, доступ к которому можно получить на любом ЦР
+    - Новогодние подарочные микромодули автоматически перемещаются в данное хранилище
+    - При уничтожении всех ЦР доступ к хранилищу утрачивается вместе со всеми спрятанными в него микромодулями
+    - В три раза увеличен коэффициент сдачи физических нодов на нод-счёт
+    - Для дополнительных модов на выдачу ММ добавлена механика ограниченности резервов сети Центров Рейнджеров
+    - Все вопросы о рейнджерах, нодах и пиратах на ЦР были вынесены в отдельный диалог
+    <clr><clrEnd>
+    <color=0,50,200>Добавление новой игровой механики:</color>
+    - Игрок может собирать неизвестные микромодули, изредка выпадающие из доминаторов
+    - Неизвестные ММ сдаются в ЦР за солидное вознаграждение, а за каждые 25 неизвестных ММ игрока награждают особым экспериментальным микромодулем
+  FullDescriptionEng: |-
+    <color=0,50,200>Expanding the functionality of ranger centers:</color>
+    - The player gets a personal micromodule storage, reachable at any Ranger Center
+    - New Year's gift micromodules are moved into that storage automatically
+    - If every Ranger Center is destroyed, access to the storage is lost together with everything hidden in it
+    - The rate at which physical nodes are handed in for the node account is tripled
+    - For add-on mods that issue micromodules, the Ranger Center network now has limited reserves
+    - All the questions about rangers, nodes and pirates at a Ranger Center were moved into a separate dialogue
+    <clr><clrEnd>
+    <color=0,50,200>New game mechanics:</color>
+    - The player can collect unknown micromodules that occasionally drop from dominators
+    - Unknown micromodules are handed in at a Ranger Center for a substantial reward, and every 25 of them earn the player a special experimental micromodule
+
+# public — the sources this mod is based on / derived from. The REDUX edition of the original mod,
+# archived in the museum (no source URL exists outside it).
+based_on:
+  - source: 🏛️ https://github.com/space-rangers-mods-museum/ExpRC__redux
+    note: ExpRC - Huk, Klaxons; the REDUX edition of the pack
+
+# public — what this workshop edition changed relative to its source
+changes:
+  - "Dropped the moved-elsewhere Klissan-war story. In the shipped edition a science base no longer offers the vanilla history answer — the Lang replaced `FormRuinsSB.History.PlayerOk` with the hide-token `BlockMePls` and the script registered it through `AddDialogBlock(..., 2)` — and the very same story was re-offered from the Ranger Center (`FormRuins.RC.History`, five pages). The story now stays where the base game puts it: the science base. The block, the ten objects of the ranger-center copy (page, its answers and the nodes that built them) and both Lang blocks are gone."
+  - "Restored the English `CFG/Eng/Lang.dat` from the Russian tree. In the REDUX edition the English side is decorative — its own `ModuleInfo` admits it with the `Warning! Untranslated staff!` mark, and it is missing the blocks added to the Russian (the ranger-center questions, the micromodule storage, the unknown-micromodule hand-in). The English was rebuilt from the Russian: the same key tree, translated in the game's voice (see `.ai/kb/translation-style.md`)."
+  - "Fixed four script defects the toolkit's runtime lint found. Two `BuildListOfNewShips` loops started at index 0 while the engine's array slot 0 is the service element, so the first scanned entry was not a ship; three `if(ArrayDim(tarr1))` guards tested a bare dimension, which an RScript array always satisfies."
+  - "Flattened `MMStorageEther`'s page loop. The panel was built by a loop over 38-entry pages wrapping a loop over the entries, two levels of world access inside a turn; the page is now derived from the entry index, with the same ether calls and counters."
+  - "Rebuilt `DATA/Script/Mod_ExpRC.scr` from `src/Mod_ExpRC.rson` and re-keyed the dialog texts onto the rebuilt script's numbering (`srhd.py lang remap`) — the pack's SCR was not built by this RScript, so its `Script.Mod_ExpRC.<n>` keys no longer matched the script it ships with."
+  - "Dropped the loose text that came inside the pack (`CFG/Rus/Lang.txt`, `DATA/Script/Mod_ExpRC.txt`): the readable sources are the ones decoded/decompiled ourselves into `src/`."
+  - "Repointed the mod's own `Mods\\Expansion\\ExpRC\\…` paths in `src/CacheData.txt` to `Mods\\Miscellaneous\\ExpRC\\…` (the workshop deploys every mod under `Miscellaneous`)."
+  - "Signed every `CFG/*.dat` (`Main.dat`, `CacheData.dat`, `Lang.dat` in each language) — they ship unsigned, and one unsigned `.dat` disqualifies the run from achievements."
