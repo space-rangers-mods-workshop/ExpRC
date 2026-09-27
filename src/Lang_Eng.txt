@@ -86,8 +86,8 @@ FormRuins ^{
             Question4=How can I help the Coalition in the fight against piracy?
         }
         SaleNod ^{
-            NodsTaken=Good job, <Player>, we accept the nodes and will be crediting your personal node account. Account balance: nods nodes.
-            NodsTaken=Our node reserve storage has also increased and now amounts to nodes nodes.
+            NodsTaken=Good job, <Player>, we take the nodes and credit your personal node account. Account balance: #Account# nodes.
+            NodsTaken=Our node reserve storage has also increased and now amounts to #Reserve# nodes.
             NodsTaken=Furthermore, your rating has also improved. Keep working to increase our stock of nodes going forward.
             PlayerSend=Dialogue, dismissed!
             PlayerSendMod=Hand in a batch of nodes: Count pcs.
@@ -104,7 +104,7 @@ FormRuins ^{
             RCAnswer=Dear <Player>! Today we are ready to offer you the following micromodules:
             RCAnswer=-------------------------------------------
             RCAnswerEnd=Status of your node account: <BaseNod> nodes.
-            RCAnswerEnd=Node stock in the network: nodes nodes.
+            RCAnswerEnd=Node stock in the network: #Reserve# nodes.
             RCAnswerMM=. Micromodule <Name>
             RCAnswerMMCost=Module cost: <Count> nodes.
             RCAnswerStart=Dear <Player>! Today we are ready to offer you the following micromodules:<Text>
