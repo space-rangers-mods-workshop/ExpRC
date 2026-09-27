@@ -128,7 +128,7 @@ FormRuins ^{
             RCAnswer=Unknown micromodules -- that's what we call all the unstudied structures that fall into rangers' hands after the destruction of certain dominators
             RCAnswer=At the moment we have no information about these structures, in particular as to why we cannot use them not only in our equipment, but in dominator equipment as well. Perhaps they are just laboratory prototypes, not even completed yet.
             RCAnswer=Either way, these modules help our specialists develop new structures. Access to some of them is granted to rangers who have particularly distinguished themselves in handing them in.
-            RCAnswer=Besides, we reward the very act of handing in unknown micromodules, crediting <clr>reward<clrEnd> nodes to the ranger's personal node account for every specimen turned in to us.
+            RCAnswer=Besides, the hand-in itself is worth something: we credit <clr>reward<clrEnd> nodes to the ranger's personal node account for every specimen turned in to us.
         }
     }
 }

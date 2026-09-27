@@ -1300,7 +1300,7 @@
             "}",
             "",
             "//Собираем строчки для подстановки",
-            "str0 = '</color>' + Format(CT('FormRuins.RC.TakeNod.RCAnswerStart'), '<Text'+'>', str0, '') + Format('<br>') + DefSplt + Format('<br>') + Format(CT('FormRuins.RC.TakeNod.RCAnswerEnd'), '<BaseNod'+'>', RangerBaseNodes(Player()));",
+            "str0 = '</color>' + Format(CT('FormRuins.RC.TakeNod.RCAnswerStart'), '<Text'+'>', str0, '') + Format('<br>') + DefSplt + Format('<br>') + Format(CT('FormRuins.RC.TakeNod.RCAnswerEnd'),'#Reserve#',FreeNodes, '<BaseNod'+'>', RangerBaseNodes(Player()));",
             "str4 = '</color>' + CT('FormRuins.RC.TakeNod.PlayerNo');",
             "DChange(17);",
             "exit;"
@@ -1618,7 +1618,7 @@
             "}",
             "",
             "//Собираем строчки для подстановки",
-            "str0 = '</color>' + Format(CT('FormRuins.RC.TakeNod.RCAnswerStart'), '<Text'+'>', str0, '') + Format('<br>') + DefSplt + Format('<br>') + Format(CT('FormRuins.RC.TakeNod.RCAnswerEnd'),'nodes',FreeNodes, '<BaseNod'+'>', RangerBaseNodes(Player()));",
+            "str0 = '</color>' + Format(CT('FormRuins.RC.TakeNod.RCAnswerStart'), '<Text'+'>', str0, '') + Format('<br>') + DefSplt + Format('<br>') + Format(CT('FormRuins.RC.TakeNod.RCAnswerEnd'),'#Reserve#',FreeNodes, '<BaseNod'+'>', RangerBaseNodes(Player()));",
             "str4 = '</color>' + CT('FormRuins.RC.TakeNod.PlayerNo');",
             "DChange(24);",
             "exit;"
